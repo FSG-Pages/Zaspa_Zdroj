@@ -61,6 +61,14 @@ body {
     margin: 20px 0;
 }
 
+/* Stylizacja tylko dla smartfonów */
+@media (max-width: 768px) {
+    .menu {
+        margin-right: 170px;
+    }
+}
+
+
 .menu > li {
     position: relative;
 }
@@ -360,6 +368,7 @@ text-decoration: none;
     cursor: pointer;
     justify-content: center;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .rekrutacja-btn:hover {
@@ -530,6 +539,11 @@ text-decoration: none;
         transform: translateY(-10px);
         animation: submenuFadeIn 0.5s forwards;
     }
+}
+
+#end{
+    font-size: 7px;
+    color:  rgba(209,20,212,1);
 }
 
 /* Możesz dodać inne media queries dla jeszcze mniejszych ekranów jeśli chcesz */
