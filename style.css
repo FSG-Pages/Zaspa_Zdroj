@@ -209,9 +209,10 @@ body {
     }
 }
 
+/* Domyślne style dla sekcji #infos (komputer) */
 #infos {
-    width: 60%;
-    height: 1250px;
+    width: 500px;
+    height: 500px;
     background-color: transparent;
     border-radius: 20px;
     margin-top: 60px;
@@ -219,6 +220,15 @@ body {
     transition: margin-top 0.3s ease;
     text-align: center;
     padding: 10px;
+}
+
+/* Dostosowanie sekcji #infos dla urządzeń mobilnych */
+@media (max-width: 768px) {
+    #infos {
+        width: 80%; /* Ustaw szerokość na 80% ekranu */
+        height: auto; /* Dostosuj wysokość do treści */
+        padding: 15px; /* Dopasuj padding, jeśli potrzebne */
+    }
 }
 
 #infos_header {
