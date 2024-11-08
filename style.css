@@ -81,6 +81,9 @@ body {
     justify-content: center;
     white-space: nowrap;
     box-sizing: border-box;
+
+    left: 200px; /* Przesunięcie menu o 200px od lewej */
+    
     
     
 }
@@ -207,8 +210,8 @@ body {
 }
 
 #infos {
-    width: 500px;
-    height: 500px;
+    width: 60%;
+    height: 1250px;
     background-color: transparent;
     border-radius: 20px;
     margin-top: 60px;
@@ -520,5 +523,6 @@ text-decoration: none;
 }
 
 /* Możesz dodać inne media queries dla jeszcze mniejszych ekranów jeśli chcesz */
+
 
 
