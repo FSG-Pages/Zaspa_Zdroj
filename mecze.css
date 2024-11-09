@@ -63,6 +63,8 @@ img:hover {
     height: 50px;
     border-radius: 10px;
     text-align: center;
+    justify-content: center; /* Wycentrowanie w poziomie */
+    align-items: center;    /* Wycentrowanie w pionie */
 }
 #infos_header_draw {
     font-size: 32px;
@@ -73,6 +75,8 @@ img:hover {
     height: 50px;
     border-radius: 10px;
     text-align: center;
+    justify-content: center; /* Wycentrowanie w poziomie */
+    align-items: center;    /* Wycentrowanie w pionie */
 }
 #infos_header_lose {
     font-size: 32px;
@@ -83,6 +87,8 @@ img:hover {
     height: 50px;
     border-radius: 10px;
     text-align: center;
+    justify-content: center; /* Wycentrowanie w poziomie */
+    align-items: center;    /* Wycentrowanie w pionie */
 }
 .logo-container {
     display: flex; /* Używamy flexbox do ustawienia obrazków obok siebie */
