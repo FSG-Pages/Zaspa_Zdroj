@@ -64,7 +64,7 @@ body {
 /* Stylizacja tylko dla smartfonów */
 @media (max-width: 768px) {
     .menu {
-        margin-right: 170px;
+        margin-right: 250px;
     }
 }
 
