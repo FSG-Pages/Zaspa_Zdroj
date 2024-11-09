@@ -180,3 +180,43 @@ img:hover {
     border-radius: 5px; /* opcjonalne zaokrąglenie */
     text-align: center; /* centrowanie tekstu */
 }
+.players_container {
+    display: flex;
+    gap: 20px; /* odstęp między divami */
+    margin-bottom: 20px; /* odstęp poniżej */
+    justify-content: center; /* centrowanie w poziomie */
+}
+
+.players_container div {
+    padding: 10px;
+    background-color: #f0f0f0; /* opcjonalne tło */
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center; /* Centrowanie tekstu w pionie */
+    justify-content: center; /* Centrowanie tekstu w poziomie */
+    width: 50px;
+    height: 50px;
+}
+
+/* Dodajemy media query dla mniejszych ekranów */
+@media (max-width: 768px) {
+    .players_container {
+        flex-direction: row; /* Ustawienie wierszowe na telefonach */
+        flex-wrap: wrap; /* Pozwól, aby elementy zawijały się w linie */
+    }
+    
+    .players_container div {
+        width: 45px; /* Zmniejszamy szerokość na mniejszych ekranach */
+        height: 45px; /* Zmniejszamy wysokość na mniejszych ekranach */
+    }
+}
+
+/* Dodatkowe media query dla jeszcze mniejszych ekranów */
+@media (max-width: 480px) {
+    .players_container div {
+        width: 40px; /* Jeszcze mniejsze wymiary na bardzo małych ekranach */
+        height: 40px;
+        font-size: 24px; /* Dopasowanie rozmiaru czcionki */
+    }
+}

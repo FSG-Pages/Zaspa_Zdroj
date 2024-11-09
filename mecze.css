@@ -160,3 +160,55 @@ img:hover {
     background-color: rgba(255, 255, 255, 0.5); /* Przezroczystość toru */
     border-radius: 10px; /* Zaokrąglone rogi toru */
 }
+/* Responsywność dla sekcji wyników meczów */
+#infos {
+    width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 15px auto; /* Centrowanie i odstęp między sekcjami */
+    box-shadow: 0px 1px 24px 0px rgba(66, 68, 90, 1);
+    background-color: rgba(255, 255, 255, 0.1); /* Przezroczystość tła */
+    transition: margin-top 0.3s ease;
+    text-align: center;
+}
+
+#infos_header_win,
+#infos_header_draw,
+#infos_header_lose {
+    font-size: 32px;
+    font-weight: bolder;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+#infos_header_win {
+    background-color: rgb(25, 135, 56); /* Zielony dla wygranej */
+}
+
+#infos_header_draw {
+    background-color: rgb(219, 216, 29); /* Żółty dla remisu */
+}
+
+#infos_header_lose {
+    background-color: rgb(174, 31, 31); /* Czerwony dla przegranej */
+}
+
+/* Responsywność dla sekcji wyników meczów na urządzeniach mobilnych */
+@media (max-width: 768px) {
+    #infos {
+        width: 90%; /* Szerokość na urządzeniach mobilnych */
+        padding: 15px;
+    }
+    #infos_header_win,
+    #infos_header_draw,
+    #infos_header_lose {
+        font-size: 28px; /* Zmniejszenie rozmiaru tekstu w małych nagłówkach */
+        width: 45px; /* Mniejsze wymiary nagłówków */
+        height: 45px;
+    }
+}
