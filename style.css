@@ -34,8 +34,12 @@
     color: white;
     text-align: center;
     margin-top: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     -webkit-text-stroke: 3px rgb(43, 42, 42); /* width and color */
+    text-shadow: 
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }
 
 html, body {
@@ -554,36 +558,4 @@ text-decoration: none;
 }
 
 /* Możesz dodać inne media queries dla jeszcze mniejszych ekranów jeśli chcesz */
-
-/* Standardowy styl dla większych ekranów */
-#header {
-    font-size: 60px;
-    letter-spacing: 5px;
-    font-weight: bold;
-    font-family: Arial Black;
-    color: white;
-    text-align: center;
-    margin-top: 20px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke: 3px rgb(43, 42, 42); /* Obwódka tekstu */
-}
-
-/* Responsywność dla ekranów mniejszych niż 768px */
-@media (max-width: 768px) {
-    #header {
-        font-size: 60px; /* Zmniejszona wielkość tekstu */
-        -webkit-text-stroke: 0.25px rgb(0, 0, 0); /* Cieńsza obwódka */
-        letter-spacing: 3px; /* Dopasowana przerwa między literami */
-    }
-}
-
-/* Dla jeszcze mniejszych ekranów */
-@media (max-width: 480px) {
-    #header {
-        font-size: 60px; /* Jeszcze mniejszy tekst */
-        -webkit-text-stroke: 0.125px rgb(0, 0, 0); /* Minimalna obwódka */
-        letter-spacing: 2px; /* Jeszcze ciaśniejsze odstępy */
-    }
-}
-
 
