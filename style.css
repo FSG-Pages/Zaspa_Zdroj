@@ -555,18 +555,24 @@ text-decoration: none;
 
 /* Możesz dodać inne media queries dla jeszcze mniejszych ekranów jeśli chcesz */
 
-#header::before {
-    content: "ZASPA ZDRÓJ";
+
+/* Domyślny styl nagłówka (komputery) */
+#header {
     font-size: 60px;
     letter-spacing: 5px;
     font-weight: bold;
     font-family: Arial Black;
     color: white;
-    position: absolute;
-    
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1; /* Umieszcza napis za nagłówkiem głównym */
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 3px rgb(43, 42, 42); /* Obramowanie czcionki */
 }
 
+/* Styl dla urządzeń mobilnych (wyłączenie obramowania) */
+@media (max-width: 768px) {
+    #header {
+        -webkit-text-stroke: 0; /* Wyłączamy obramowanie czcionki */
+    }
+}
 
