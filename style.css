@@ -575,5 +575,54 @@ text-decoration: none;
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         -webkit-text-stroke: 0; /* Wyłączamy obramowanie czcionki */
     }
+    .burger-menu{
+        margin-right: 275px; 
+    }
 }
+.burger-menu {
+    width: fit-content; /* Kwadratowy kształt */
+    height: fit-content;
+    background-color: white;
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Odstęp między "burgerami" */
+    cursor: pointer;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    padding: 15px;
+ 
+}
+
+.burger-menu:hover {
+    transform: scale(1.1);
+    background-color: hsl(0, 0%, 0%);
+    color: #ffffff;
+}
+
+.burger-menu .line {
+    width: 30px; /* Szerokość linii */
+    height: 4px; /* Grubość linii */
+    background-color: black;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.burger-menu:hover .line {
+    background-color: hsl(0, 0%, 100%);
+    color: #ffffff;
+}
+
+/* Ukrycie menu początkowo */
+.menu {
+    display: none;
+}
+
+/* Klasa aktywująca menu */
+.menu.active {
+    display: flex; /* Pokazuje menu */
+}
+
 
