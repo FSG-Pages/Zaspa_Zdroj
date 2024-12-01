@@ -95,6 +95,7 @@ img:hover {
     justify-content: center; /* Opcjonalnie: wyśrodkowuje obrazy w poziomie */
     align-items: center; /* Opcjonalnie: wyśrodkowuje obrazy w pionie */
     gap: 10px; /* Opcjonalnie: dodaje odstęp między obrazkami */
+    border: 5px ;
 }
 
 
