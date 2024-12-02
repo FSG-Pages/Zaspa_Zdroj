@@ -125,6 +125,7 @@ img:hover {
     text-align: center;
     justify-content: center; /* Wycentrowanie w poziomie */
     align-items: center;    /* Wycentrowanie w pionie */
+    transition: transform 0.3s ease;
 }
 #def{
     font-size: 32px;
@@ -137,6 +138,7 @@ img:hover {
     text-align: center;
     justify-content: center; /* Wycentrowanie w poziomie */
     align-items: center;    /* Wycentrowanie w pionie */
+    transition: transform 0.3s ease;
 }
 #mid{
     font-size: 32px;
@@ -149,6 +151,7 @@ img:hover {
     text-align: center;
     justify-content: center; /* Wycentrowanie w poziomie */
     align-items: center;    /* Wycentrowanie w pionie */
+    transition: transform 0.3s ease;
 }
 #n{
     font-size: 32px;
@@ -161,7 +164,13 @@ img:hover {
     text-align: center;
     justify-content: center; /* Wycentrowanie w poziomie */
     align-items: center;    /* Wycentrowanie w pionie */
+    transition: transform 0.3s ease;
 }
+
+#gk:hover, #def:hover, #mid:hover, #n:hover {
+    transform: scale(1.05);
+}
+
 .players-container {
     display: flex; /* Używamy flexbox do ustawienia obrazków obok siebie */
     justify-content: center; /* Opcjonalnie: wyśrodkowuje obrazy w poziomie */

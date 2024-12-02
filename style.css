@@ -56,14 +56,15 @@ body {
 
 .menu {
     display: flex;
-    gap: 2.5px;
+    gap: 5px;
     list-style: none;
     padding: 0;
     margin: 10px ;
     background-color: rgb(255, 255, 255);
     width: fit-content;
-    height: fit-content;
+    height: 260px;
     border-radius: 10px;
+    padding: 3px;
 }
 
 /* Stylizacja tylko dla smartfonów */
@@ -79,22 +80,22 @@ body {
 }
 
 .menu > li > a {
+    /* main opcje */
     padding: 10px 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 18px;
-    border: 5px solid white;
+    border: 5px solid rgb(255, 255, 255);
     background-color: rgb(34, 35, 33);
     transition: transform 0.3s ease;
     border-radius: 10px;
-    width: 100px;
+    width: 150px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
     box-sizing: border-box;
-
     left: 200px; /* Przesunięcie menu o 200px od lewej */
     
     
@@ -104,7 +105,7 @@ body {
 
 
 .menu > li > a:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 
@@ -156,6 +157,7 @@ body {
 }
 
 .submenu li a {
+    /* podopcje */
     padding: 10px 20px;
     border: 3px solid white;
     background-color: rgb(34, 35, 33);
@@ -235,8 +237,12 @@ body {
     transition: margin-top 0.3s ease;
     text-align: center;
     padding: 10px;
+    transition: transform 0.3s ease;
 }
 
+#infos:hover{
+    transform: scale(1.05);
+}
 /* Dostosowanie sekcji #infos dla urządzeń mobilnych */
 @media (max-width: 768px) {
     #infos {
@@ -313,6 +319,11 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center; 
+transition: transform 0.3s ease;
+}
+
+#ig_text:hover{
+    transform: scale(1.05);
 }
 
 .instagram-icon {
@@ -442,6 +453,7 @@ text-decoration: none;
     text-align: center;
     box-shadow: 0px 1px 24px 0px rgba(66, 68, 90, 1);
     margin-bottom:50px;
+   
     
 }
 
@@ -490,6 +502,7 @@ text-decoration: none;
     opacity: 0;
     transform: translateY(-10px);
     animation: submenuFadeIn 0.5s forwards;
+     transform: scale(1.05);
 }
 
 /* Animacja dla submenu */
@@ -503,12 +516,16 @@ text-decoration: none;
         transform: translateY(0);
     }
 }
+.menu {
+    gap:20px;
+}
 
 /* Media query dla ekranów mniejszych niż 768px (np. telefony) */
 @media (max-width: 768px) {
     .menu {
         flex-direction: column; /* Ustawienie elementów w jednej kolumnie */
         align-items: flex-start;
+        gap:20px;
     }
 
     .menu > li {
@@ -518,10 +535,10 @@ text-decoration: none;
     .submenu {
         position: absolute;
         top: 0;
-        left: 100%; /* Przesunięcie podmenu na prawą stronę */
+        left: 100%; 
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
         list-style-type: none;
         padding: 10px 0;
         margin-top: 0;
@@ -545,7 +562,12 @@ text-decoration: none;
         opacity: 0;
         transform: translateY(-10px);
         animation: submenuFadeIn 0.5s forwards;
+        transform: scale(1.05);
     }
+
+
+    
+    
 }
 
 #end{
@@ -628,3 +650,82 @@ text-decoration: none;
 }
 
 
+/* Kontener */
+.burger-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Mgła */
+.fog {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Ukrycie mgły */
+    width: 150px;
+    height: 150px;
+    background: rgba(4, 4, 4, 0);
+    border-radius: 50%;
+    filter: blur(20px);
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+    opacity: 0; /* Ukrycie początkowe */
+    z-index: 0;
+}
+
+/* Stylizacja burger-menu */
+.burger-menu {
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 2;
+    animation: burger-bounce 0.7s ease-in-out; /* Dodanie animacji */
+}
+
+.burger-menu .line {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+    transition: background-color 0.75s ease;
+}
+
+/* Hover efekt */
+.burger-menu:hover {
+    transform: scale(1.1);
+    background-color: rgb(34, 35, 33);
+    color: #ffffff;
+}
+
+.burger-menu:hover .line {
+    background-color: hsl(0, 0%, 100%);
+}
+
+/* Animacja burger-menu */
+@keyframes burger-bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Powiększenie */
+    }
+    100% {
+        transform: scale(1); /* Powrót do normalnego rozmiaru */
+    }
+}
+
+/* Aktywacja mgły */
+body.loaded .fog {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
