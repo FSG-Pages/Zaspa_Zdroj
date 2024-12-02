@@ -65,6 +65,8 @@ body {
     height: 260px;
     border-radius: 10px;
     padding: 3px;
+    margin-left: 120px;
+    left: 10px; /* Przesunięcie menu o 200px od lewej */
 }
 
 /* Stylizacja tylko dla smartfonów */
@@ -96,7 +98,7 @@ body {
     justify-content: center;
     white-space: nowrap;
     box-sizing: border-box;
-    left: 200px; /* Przesunięcie menu o 200px od lewej */
+    left: 10px; /* Przesunięcie menu o 200px od lewej */
     
     
     

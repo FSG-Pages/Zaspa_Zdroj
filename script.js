@@ -1,3 +1,9 @@
+function toggleTooltip() {
+    const tooltip = document.querySelector('.rekrutacja-btn');
+    tooltip.classList.toggle('active');
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
 });

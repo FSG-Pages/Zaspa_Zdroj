@@ -167,10 +167,9 @@ img:hover {
     transition: transform 0.3s ease;
 }
 
-#gk:hover, #def:hover, #mid:hover, #n:hover {
+#gk,#def,#mid,#n:hover{
     transform: scale(1.05);
 }
-
 .players-container {
     display: flex; /* Używamy flexbox do ustawienia obrazków obok siebie */
     justify-content: center; /* Opcjonalnie: wyśrodkowuje obrazy w poziomie */
