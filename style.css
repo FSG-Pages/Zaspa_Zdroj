@@ -38,13 +38,26 @@
     -webkit-text-stroke: 3px rgb(43, 42, 42); /* width and color */
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: Arial Black;
+
+@media (min-width: 769px) {
+    html,body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: Arial Black;
+    }
 }
+
+@media (max-width: 768px) {
+    html,body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: Arial Black;
+    }
+}
+
 
 body {
     background: linear-gradient(0deg, rgba(209,20,212,1) 1%, rgba(209,20,212,1) 40%, rgba(49,116,201,1) 100%);
@@ -65,14 +78,13 @@ body {
     height: 260px;
     border-radius: 10px;
     padding: 3px;
-    margin-left: 120px;
-    left: 10px; /* Przesunięcie menu o 200px od lewej */
+   
 }
 
 /* Stylizacja tylko dla smartfonów */
 @media (max-width: 768px) {
     .menu {
-        margin-right: 250px;
+        margin-right: 150px;
     }
 }
 
@@ -91,7 +103,7 @@ body {
     background-color: rgb(34, 35, 33);
     transition: transform 0.3s ease;
     border-radius: 10px;
-    width: 150px;
+    width: 140px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -169,7 +181,7 @@ body {
     transition: border-color 0.4s ease;
     border-radius: 5px;
     position: relative;
-    width: 150px;
+    width: 140px;
     height: 40px;
     display: flex;
     align-items: center;
