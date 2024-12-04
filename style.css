@@ -446,7 +446,7 @@ text-decoration: none;
 .tooltip {
     display: none;
     position: absolute;
-    top: 850px;
+    top: 125px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.7);
@@ -459,11 +459,12 @@ text-decoration: none;
     margin-bottom:50px;
    
     
-}@media (max-width: 768px) {
+}
+@media (max-width: 768px) {
     .menu {
         display: none;
         position: absolute;
-        margin-top: 350px;
+        margin-top: 380px;
         margin-left: 150px;
         transform: translate(-50%, -50%);
         background-color: rgb(255, 255, 255);
@@ -475,6 +476,23 @@ text-decoration: none;
         box-shadow: 0px 1px 24px 0px rgba(66, 68, 90, 1);
         margin-bottom: 50px;
         align-content: center;
+    }
+    .tooltip {
+        display: none;
+        position: absolute;
+        top: 850px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+        box-shadow: 0px 1px 24px 0px rgba(66, 68, 90, 1);
+        margin-bottom:50px;
+       
+        
     }
 }
 
