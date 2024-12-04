@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function toggleMenu() {
     const menu = document.querySelector('.menu');
     menu.classList.toggle('active');
+    
 }
 document.addEventListener("DOMContentLoaded", () => {
     const text = `Jesteśmy klubem piłkarskim z dzielnicy Zaspa,<br>
