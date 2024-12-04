@@ -114,7 +114,7 @@ img:hover {
     border-radius: 10px; /* Zaokrąglone rogi toru */
 }
 
-#gk{
+#gk, #def, #mid, #n {
     font-size: 32px;
     font-weight: bolder;
     color: rgb(255, 255, 255);
@@ -123,53 +123,57 @@ img:hover {
     height: 50px;
     border-radius: 10px;
     text-align: center;
-    justify-content: center; /* Wycentrowanie w poziomie */
-    align-items: center;    /* Wycentrowanie w pionie */
-    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    animation: scaleInOut 1s ease-out forwards; /* Animation on page load */
 }
-#def{
-    font-size: 32px;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
+
+/* Different background colors for each div */
+#def {
     background-color: rgb(255, 0, 0);
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center; /* Wycentrowanie w poziomie */
-    align-items: center;    /* Wycentrowanie w pionie */
     transition: transform 0.3s ease;
 }
-#mid{
-    font-size: 32px;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
+#mid {
     background-color: rgb(190, 202, 12);
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center; /* Wycentrowanie w poziomie */
-    align-items: center;    /* Wycentrowanie w pionie */
     transition: transform 0.3s ease;
 }
-#n{
-    font-size: 32px;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
+#n {
     background-color: rgb(31, 174, 31);
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    text-align: center;
-    justify-content: center; /* Wycentrowanie w poziomie */
-    align-items: center;    /* Wycentrowanie w pionie */
     transition: transform 0.3s ease;
 }
 
-#gk,#def,#mid,#n:hover{
-    transform: scale(1.05);
+#gk:hover, #def:hover, #mid:hover, #n:hover{
+    transform: scale(1.1);
+
 }
+
+
+
+
+/* Animation definition for scaling on page load */
+@keyframes scaleInOut {
+    0% {
+        transform: scale(1); /* Start at original size */
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Return to original size */
+    }
+}
+
+/* Hover effect on the divs */
+#gk:hover, #def:hover, #mid:hover, #n:hover {
+    transform: scale(1.1); /* Scale up when hovered */
+}
+
+/* Hover effect on the links inside the divs */
+#gk a:hover, #def a:hover, #mid a:hover, #n a:hover {
+    transform: scale(1.1); /* Scale up when hovered */
+}
+
 .players-container {
     display: flex; /* Używamy flexbox do ustawienia obrazków obok siebie */
     justify-content: center; /* Opcjonalnie: wyśrodkowuje obrazy w poziomie */
