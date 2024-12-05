@@ -38,8 +38,7 @@
     -webkit-text-stroke: 3px rgb(43, 42, 42); /* width and color */
 }
 
-
-
+/* @media (min-width: 769px){ */
     html,body {
         height: 100%;
         margin: 0;
@@ -47,6 +46,16 @@
         overflow-x: hidden;
         font-family: Arial Black;
     }
+/* } */
+
+/* @media (max-width: 768px){
+    html,body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        font-family: Arial Black;
+    }
+} */
 
 
 body {
@@ -480,7 +489,7 @@ text-decoration: none;
     .tooltip {
         display: none;
         position: absolute;
-        top: 850px;
+        top: 650px;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 0.7);
