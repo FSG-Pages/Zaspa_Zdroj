@@ -489,7 +489,7 @@ text-decoration: none;
     .tooltip {
         display: none;
         position: absolute;
-        top: 650px;
+        top: 450px;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: rgba(0, 0, 0, 0.7);
